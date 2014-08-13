@@ -20,8 +20,6 @@ handle_call(Req, _From, State) ->
   lager:warning("Unhandled call ~p~n", [Req]),
   {reply, State}.
 
-handle_cast(stop, State) ->
-  {stop, normal, State};
 handle_cast(Req, State) ->
   lager:warning("Unhandled cast: ~p~n", [Req]),
   {noreply, State}.
@@ -33,11 +31,6 @@ handle_info(Info, State) ->
 code_change(_OldVsn, State, _Extra) ->
   {ok, State}.
 
-terminate(normal, _State) ->
-  ok;
-terminate(shutdown, _State) ->
-  ok;
-terminate({shutdown, _Reason}, _State) ->
-  ok;
-terminate(_Reason, _State) ->
+terminate(Reason, _State) ->
+  lager:info("Terminate: ~p", [Reason]),
   ok.
