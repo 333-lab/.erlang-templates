@@ -1,0 +1,6 @@
+{variables, [
+  {name, "name"},
+  {copyright_year, "2014"},
+  {author_name, "Kirill Pinchuk"},
+  {author_email, "k_pinchuk@wargaming.net"}]}.
+{template, "gen_server.erl", "src/{{name}}.erl"}.
