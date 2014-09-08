@@ -1,6 +1,6 @@
 -module({{name}}).
 -author('{{author_name}} <{{author_email}}>').
--vns("0.1").
+-vsn("0.1").
 
 -behaviour(gen_server).
 

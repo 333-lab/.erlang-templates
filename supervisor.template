@@ -6,4 +6,4 @@
   {author_email,"cybergrind@gmail.com"}
 ]}.
 {dir, "{{app_dir}}/src"}.
-{template, "finsup.erl", "{{app_dir}}/src/{{name}}_sup.erl"}.
+{template, "supervisor.erl", "{{app_dir}}/src/{{name}}.erl"}.
