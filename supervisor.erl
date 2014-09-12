@@ -1,3 +1,4 @@
+%% -*- mode: erlang;erlang-indent-level: 4;indent-tabs-mode: nil -*-
 -module({{name}}).
 
 -behaviour(supervisor).
@@ -9,8 +10,8 @@
 
 
 start_link() ->
-  supervisor:start_link({local, ?MODULE}, ?MODULE, []).
+    supervisor:start_link({local, ?MODULE}, ?MODULE, []).
 
 init([]) ->
-  % {strategy, MaxR, MaxT}
-  {ok, { {one_for_one, 5, 10}, []} }.
+    % {strategy, MaxR, MaxT}
+    {ok, { {one_for_one, 5, 10}, []} }.
